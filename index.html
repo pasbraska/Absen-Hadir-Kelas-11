@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absensi</title>
+
+    <!-- Boostrapp -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Link Css kelas 11 -->
+
+    <link rel="stylesheet" type="text/css" href="kelas11.css" />
+  </head>
+
+  <body>
+    <!-- Password Sebelum masuk ( mulai ) -->
+
+    <div id="passwordForm">
+      <form id="password-Form" onsubmit="checkPassword(); return false;">
+        <label for="password">Masukkan Kata Sandi : </label>
+        <input type="password" id="password" required class="passwd" minlength="4" />
+        <br />
+        <input type="checkbox" id="checkbox" onclick="showPassword()" />lihat
+        password
+        <br />
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+    </div>
+
+    <!-- Password Sebelum masuk ( selesai ) -->
+
+    <!-- Konten utama mulai -->
+
+    
+    <main class="main">
+
+      <!-- Navbar mulai -->
+
+      <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <h1 class="navbar-brand" style="color: #fff">Pasbraska</h1>
+          <button
+            class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5
+                class="offcanvas-title"
+                id="offcanvasNavbarLabel"
+                style="color: #fff"
+              >
+                Pasbraska
+              </h5>
+              <button
+                type="button"
+                class="btn-close bg-light"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="waktu">
+              <div class="jam">
+                <div id="waktu"></div>
+              </div>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="/"
+                    style="color: #fff"
+                    >Dashboard</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Jadwal-Latihan/"
+                    >Jadwal Latihan</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Presensi
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="/Menu-Absen/"
+                        >Presensi Kelas 10</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/Absen-Hadir/Kelas-11/"
+                        >Presensi Kelas 11</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/Absen-Hadir/Kelas-12/"
+                        >Presensi Kelas 12</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/Absen-Hadir/Kelas-12/"
+                        >Lainnya</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navbar selesai -->
+
+      <!-- Absen Mulai -->
+
+      <div class="text-center" id="absensi">
+        <img
+          src="../foto/pasbraska.jpg"
+          class="rounded"
+          alt="pasbraska"
+          width="200px"
+        />
+        <h1>PASBRASKA</h1>
+      </div>
+
+      <div class="alert alert-danger d-none" role="alert">
+        <img
+          src="../foto/centang.png"
+          alt="p"
+          style="width: 70px; margin: 30px auto"
+        />
+        <h4 class="alert-heading">Good Job!</h4>
+        <p>Kamu telah melakukan Absensi kehadiran hari ini.</p>
+        <hr />
+        <p class="mb-0">
+          Data telah kami rekam. <br />
+          Terima Kasih !!
+        </p>
+        <hr />
+
+        <a href="/">
+          <button
+            type="menu"
+            class="btn btn-menu bg-danger"
+            style="color: white"
+          >
+            Kembali
+          </button>
+        </a>
+      </div>
+
+      <!-- Input Absen  -->
+
+      <div class="card">
+        <h4>Absensi Kehadiran</h4>
+
+        <form class="form d" name="form">
+          <div id="daftar">
+            <ul>
+              <li>
+                <a href="../foto/Kelas11.png" style="text-decoration: none;">Lihat Daftar nama di sini</a>
+              </li>
+            </ul>
+          </div>
+          <label for="name">Nama :</label>
+          <br />
+          <input
+            type="text"
+            name="nama"
+            id="nama"
+            placeholder="Rasyd"
+            required
+          />
+          <br />
+          <br />
+          <label for="kelas">Kelas :</label>
+          <br />
+          <select name="kelas" id="kelas" required>
+            <option></option>
+            <option value="XI DPIB 3">XI DPIB 3</option>
+            <option value="XI TKR 1">XI TKR 1</option>
+            <option value="XI TKJ 1">XI TKJ 1</option>
+            <option value="XI TKJ 2">XI TKJ 2</option>
+            <option value="XI DKV 1">XI DKV 1</option>
+            <option value="XI DKV 3">XI DKV 3</option>
+          </select>
+
+          <br />
+          <button type="submit" class="btn btn-kirim">KIRIM</button>
+
+          <button type="reset" class="btn btn-reset">Reset</button>
+
+          <!-- button loading -->
+
+          <button
+            class="btn btn-primary btn-loading d-none"
+            type="button"
+            disabled
+          >
+            <span
+              class="spinner-border spinner-border-sm"
+              aria-hidden="true"
+            ></span>
+            <span role="status">Loading...</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Absen Selesai -->
+
+      <p style="margin-bottom: 200px"></p>
+    </main>
+
+    <!-- Konten Utama selesai -->
+
+    <!-- Script boostrap -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script js kelas 11 -->
+
+    <script src="kelas11.js"></script>
+  </body>
+</html>

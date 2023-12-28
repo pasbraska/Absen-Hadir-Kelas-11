@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,200;1,400&display=swap");
+
+* {
+    font-family: poppins, sans-serif;
+}
+
+.navbar {
+    /* background: linear-gradient(to right, rgb(144, 0, 0) , rgb(250, 120, 120), rgb(255,255,255)); */
+    background: linear-gradient(
+      to right,
+      rgb(250, 0, 0),
+      rgb(230, 0, 0),
+      rgb(200, 0, 0),
+      rgb(100, 0, 0),
+      rgb(50, 0, 0),
+      rgb(0, 0, 0)
+    );
+}
+
+  .navbar a {
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.offcanvas {
+    background: linear-gradient(
+      to top,
+      rgb(200, 0, 0),
+      rgb(100, 0, 0),
+      rgb(50, 0, 0),
+      rgb(0, 0, 0)
+    );
+    height: 50%;
+}
+
+.dropdown-menu {
+    justify-content: center;
+    text-align: start;
+    margin-left: 20px;
+    width: 70%;
+}
+
+.nav-item .nav-link:hover {
+    color: #ff0000;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #000;
+    text-shadow: none;
+}
+
+.dropdown-item:hover {
+    background: none;
+    color: #ff0000;
+}
+
+#absensi {
+    padding-top: 50px;
+}
+
+#absensi h1 {
+    margin: auto;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 10px red;
+}
+
+.card {
+    background-color: darkgrey;
+    color: black;
+    text-align: center;
+    margin: 30px 10px;
+    padding: 40px 0px 40px 0px;
+}
+
+.card h4 {
+    margin: 20px auto;
+}
+
+#nama {
+    margin: 20px auto;
+    width: 15em;
+    height: 40px;
+}   
+
+#kelas {
+    width: 15rem;
+    height: 40px;
+}
+
+.form {
+    margin: 30px auto;
+}
+
+.btn {
+    margin: 30px;
+}
+
+.form .btn {
+    color: white;
+}
+
+.form .btn {
+    background-color: green;
+}
+
+.form .btn:active {
+    background-color: yellow;
+}
+
+#daftar {
+    margin-bottom: 30px;
+}
+
+#daftar a {
+    color: black;
+}
+
+.alert {
+    text-align: center;
+    margin: 30px auto;
+}
+
+input,
+select {
+    padding-left: 15px;
+}
+
+.main {
+    display: none;
+}
+
+#passwordForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#password-Form {
+    text-align: center;
+    width: 90%;
+    overflow: hidden;
+    background: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+#passwordForm label {
+    margin: 10px;
+    padding: 15px;
+}
+
+#password-Form input {
+    margin: 15px auto;
+}
+
+.passwd {
+    border: 3px solid;
+    padding-left: -20px;
+}
+
+#submit {
+    color: white;
+    background-color: grey;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px 0px;
+}
+
+#submit:hover {
+    background-color: yellow;
+    color: black;
+}
+
+#password-Form #password {
+    width: 40%;
+    max-width: 50%;
+    height: auto;
+    max-height: 50%;
+}
+
+
+/* Jam dinavbar */
+
+.waktu {
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    margin: 5px 50px;
+}
+
+.jam {
+    font-size: 1rem;
+    font-family: "Arial", sans-serif;
+    color: #fff;
+    text-align: center;
+    justify-content: end;
+    margin: 0px 20px;
+    border: 1px solid white;
+    width: 6em;
+}

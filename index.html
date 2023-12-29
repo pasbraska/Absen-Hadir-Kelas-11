@@ -17,15 +17,26 @@
     <!-- Link Css kelas 11 -->
 
     <link rel="stylesheet" type="text/css" href="kelas11.css" />
+
+    <!-- Link Animasi saat di scroll -->
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </head>
 
   <body>
     <!-- Password Sebelum masuk ( mulai ) -->
 
-    <div id="passwordForm">
+    <div id="passwordForm" data-aos="fade-up" data-aos-duration="2000">
       <form id="password-Form" onsubmit="checkPassword(); return false;">
         <label for="password">Masukkan Kata Sandi : </label>
-        <input type="password" id="password" required class="passwd" minlength="4" />
+        <input
+          type="password"
+          id="password"
+          required
+          class="passwd"
+          minlength="4"
+        />
         <br />
         <input type="checkbox" id="checkbox" onclick="showPassword()" />lihat
         password
@@ -33,14 +44,13 @@
         <input type="submit" value="Submit" id="submit" />
       </form>
     </div>
+    -->
 
-    <!-- Password Sebelum masuk ( selesai ) -->
+    <!-- Password Sebelum masuk ( selesai )
 
     <!-- Konten utama mulai -->
 
-    
     <main class="main">
-
       <!-- Navbar mulai -->
 
       <nav class="navbar bg-body-tertiary fixed-top">
@@ -95,9 +105,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/Jadwal-Latihan/"
-                    >Jadwal Latihan</a
-                  >
+                  <a class="nav-link" href="/Jadwal-Latihan/">Jadwal Latihan</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -156,11 +164,7 @@
       </div>
 
       <div class="alert alert-danger d-none" role="alert">
-        <img
-          src="centang.png"
-          alt="p"
-          style="width: 70px; margin: 30px auto"
-        />
+        <img src="centang.png" alt="p" style="width: 70px; margin: 30px auto" />
         <h4 class="alert-heading">Good Job!</h4>
         <p>Kamu telah melakukan Absensi kehadiran hari ini.</p>
         <hr />
@@ -190,7 +194,9 @@
           <div id="daftar">
             <ul>
               <li>
-                <a href="Kelas11.png" style="text-decoration: none;">Lihat Daftar nama di sini</a>
+                <a href="Kelas11.png" style="text-decoration: none"
+                  >Lihat Daftar nama di sini</a
+                >
               </li>
             </ul>
           </div>
@@ -256,5 +262,10 @@
     <!-- Script js kelas 11 -->
 
     <script src="kelas11.js"></script>
+
+    <!-- AOS -->
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

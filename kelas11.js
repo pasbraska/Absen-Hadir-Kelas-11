@@ -13,7 +13,7 @@ form.addEventListener("submit", (e) => {
   const nameInput = document.getElementById("nama");
   const name = nameInput.value.trim();
 
-  if(!validateForm()){
+  if (!validateForm()) {
     return;
   }
 
@@ -73,26 +73,25 @@ btnReset.style.backgroundColor = "red";
 
 function validateForm() {
   var rules = {
-    Arya:"XI DPIB 3",
-    Akbar:"XI TKRO 1",
-    Rasyd:"XI TKJ 1",
-    Fajar:"XI TKJ 2",
-    Ibra:"XI TKJ 2",
-    Vella:"XI TKJ 2",
-    Irma:"XI DKV 1",
-    Fauzan:"XI DKV 1",
-    Mersa:"XI DKV 3",
-    
-    arya:"XI DPIB 1",
-    akbar:"XI TKRO 1",
-    rasyd:"XI TKJ 1",
-    fajar:"XI TKJ 2",
-    ibra:"XI TKJ 2",
-    vella:"XI TKJ 2",
-    irma:"XI DKV 1",
-    fauzan:"XI DKV 1",
-    mersa:"XI DKV 3",
+    Arya: "XI DPIB 3",
+    Akbar: "XI TKRO 1",
+    Rasyd: "XI TKJ 1",
+    Fajar: "XI TKJ 2",
+    Ibra: "XI TKJ 2",
+    Vella: "XI TKJ 2",
+    Irma: "XI DKV 1",
+    Fauzan: "XI DKV 1",
+    Mersa: "XI DKV 3",
 
+    arya: "XI DPIB 1",
+    akbar: "XI TKRO 1",
+    rasyd: "XI TKJ 1",
+    fajar: "XI TKJ 2",
+    ibra: "XI TKJ 2",
+    vella: "XI TKJ 2",
+    irma: "XI DKV 1",
+    fauzan: "XI DKV 1",
+    mersa: "XI DKV 3",
   };
   var nama = document.getElementById("nama").value;
   var kelas = document.getElementById("kelas").value;
@@ -130,7 +129,6 @@ function showPassword() {
     input.type = "password";
   }
 }
-
 
 //Jam di navbar
 

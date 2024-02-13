@@ -111,7 +111,7 @@ function validateForm() {
 function checkPassword() {
   var password = document.getElementById("password").value;
 
-  if (password === "9378") {
+  if (password === "1209") {
     document.getElementById("passwordForm").style.display = "none";
     document.querySelector(".main").style.display = "block";
   } else {

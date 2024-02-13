@@ -77,7 +77,7 @@
     margin: 20px auto;
 }
 
-#nama {
+#nama, #keterangan {
     margin: 20px auto;
     width: 15em;
     height: 40px;
